@@ -20,6 +20,7 @@ function CourseStructure(props) {
         /* const [vid, uid] = useState(courses.reactjs) */
         const [vid, uid] = useState(courses[courseName][0].vid) /* Alt Shift downArrow to copy line */
         const [title, utit] = useState(courses[courseName][0].title)
+        const [counter, setCounter] = useState(0)
         const renderVideo = ()=>{
             return(
                 <>
@@ -37,18 +38,19 @@ function CourseStructure(props) {
         <h2>{courseName}</h2>
         {renderVideo()}
 
-        <div className="collection">
+        <ul className="collection">
 
             {
-                courses[courseName].map(item=>{
-                    return  <Link to="#!" className="collection-item" onClick={()=>{
+                courses[courseName].map((item, index)=>{
+                    return  <li key={item.vid} to="#" className={counter==index ? "collection-item myItem" : "collection-item"} onClick={()=>{
                         uid(item.vid)
                         utit(item.title)
-                    }}>{item.title}</Link>
+                        setCounter(index) //each indices ko value update
+                    }}>{item.title}</li>
                 })
 
             }
-      </div>
+      </ul>
     </div>
   );
 }
