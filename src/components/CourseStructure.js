@@ -33,6 +33,7 @@ function CourseStructure(props) {
         }
   return (
     <div className="CourseStructure">
+        <a href="http://localhost:3000/">Go back</a>
       <h1>Course Structure</h1>
         {/* <h2>Welcome to the course {props.match.params.coursename} </h2> */}
         <h2>{courseName}</h2>
