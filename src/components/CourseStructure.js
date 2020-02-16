@@ -6,9 +6,9 @@ function CourseStructure(props) {
     /* these are not in statde to change thehy are var hard coded */
         const courses = {
             reactjs: [
-                {title: "react js title 1", vid:"6j-n7ETAsiE"},
-                {title: "react js title 2", vid:"aEkLXjiUs9Y"},
-                {title: "react js title 3", vid:"ISEJCcDZMCI"}
+                {title: "Music Genre title 1", vid:"6j-n7ETAsiE"},
+                {title: "Music Genre title 2", vid:"aEkLXjiUs9Y"},
+                {title: "Music Genre title 3", vid:"ISEJCcDZMCI"}
                 
             ],
             nodejs: [
@@ -24,7 +24,7 @@ function CourseStructure(props) {
         const renderVideo = ()=>{
             return(
                 <>
-                <h1>{title}</h1>
+                <h2>{title}</h2>
                 <div className="video-container">
                     <iframe width="853" height="480" src={"//www.youtube.com/embed/"+vid+"?rel=0"} frameBorder="0" allowFullScreen></iframe>
                 </div>
@@ -34,7 +34,7 @@ function CourseStructure(props) {
   return (
     <div className="CourseStructure">
         <a href="http://localhost:3000/">Go back</a>
-      <h1>Course Structure</h1>
+      <h2>Course Structure</h2>
         {/* <h2>Welcome to the course {props.match.params.coursename} </h2> */}
         <h2>{courseName}</h2>
         {renderVideo()}

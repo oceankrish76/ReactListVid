@@ -7,10 +7,17 @@ import Greet from './components/Greet';
 import WelcomeClassc from './components/WelcomeClassc';
 import FunctionClick from './FunctionClick';
 import ClassClick from './ClassClick';
+import EventBind from './components/EventBind';
+import Header from './components/Header';
+
 
 function App() {
   return (
     <div className="App">
+      <div class="header" id="myHeader">
+       <h2>ReactJS examples</h2>
+        <Header />
+      </div>
       <BrowserRouter>
       <Route exact path="/" component={Home}/>
       <Route path="/:coursename" component={CourseStructure}/> 
@@ -25,6 +32,11 @@ function App() {
       <hr />
       <FunctionClick/>
       <ClassClick />
+      {/* <p>Use of bind in reactJs is purely because of the way this keyword works in js</p>
+      <p>Not because of how react works</p>
+      <p> Lets onclick a button change the message, which is a part of the component state. </p> */}
+      <hr />
+      <EventBind />
     </div>
   );
 }

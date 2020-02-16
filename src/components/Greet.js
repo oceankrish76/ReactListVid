@@ -1,16 +1,16 @@
 import React from 'react';
 
 const spanStyle = {
-    backgroundColor:'red',
+    backgroundColor:'green',
     color:'#ffffff'
 }
 /* function Greet (props){ //coming from app.js
     return (
         <div>
-            <h1>Destructuring props React</h1>
-           <h1>
+            <h2>Destructuring props React</h2>
+           <h2>
                 Hello {props.name} a.k.a <span style={spanStyle}> {props.heroName}   </span>
-            </h1> 
+            </h2> 
         </div>
     );
 } */
@@ -18,10 +18,10 @@ const spanStyle = {
 /* function Greet ({name, heroName}){ // coming from app.js
     return (
         <div>
-            <h1>Destructuring props React</h1>
-           <h1>
+            <h2>Destructuring props React</h2>
+           <h2>
                 Hello {name} a.k.a <span style={spanStyle}> {heroName}   </span>
-            </h1> 
+            </h2> 
         </div>
     );
 } */
@@ -30,10 +30,10 @@ function Greet (props){ // coming from app.js
     const {name, heroName} = props
     return (
         <div>
-            <h1>Destructuring props React</h1><p>props storing to a variable</p>
-           <h1>
+            <h2>Destructuring props React</h2><p>props storing to a variable</p>
+           <h2>
                 Hello {name} a.k.a The <span style={spanStyle}> {heroName}   </span>
-            </h1> 
+            </h2> 
         </div>
     );
 }
